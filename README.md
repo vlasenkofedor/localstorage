@@ -37,17 +37,17 @@ storage
 ```javascript
  _storage().subscribe('message', function (value, e) {
      // value - new value
-     // e = event object
+     // e - event object
  });
 
  var storage = _storage();
  storage.subscribe('message', function (value, e) {
     // value - new value
-    // e = event object
+    // e - event object
 }).subscribe('fn', function (fn, e) {
      fn(); //call function
     // value - new value
-    // e = event object
+    // e - event object
   });
 ```
 `Download and start files on the server` | `Скачайте и запустите файлы на сервере`
