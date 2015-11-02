@@ -50,6 +50,6 @@ storage
     // e = event object
   });
 ```
+`Download and start files on the server` | `Скачайте и запустите файлы на сервере`
+```
 [Download all example](https://github.com/Poznakomlus/localstorage/archive/master.zip)
-Download and start files on the server
-Скачайте и запустите файлы на сервере
