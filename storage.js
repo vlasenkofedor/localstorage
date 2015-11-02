@@ -144,12 +144,13 @@
                 switch (alias[type]) {
                     case 'd':
                     case 'f':
-                        value = ':' + alias[type] + ':' + value.toString();
+                        value = value.toString();
                         break;
                     default:
-                        value = ':' + alias[type] + ':' + JSON.stringify(value);
+                        value = JSON.stringify(value);
                         break;
                 }
+                value = ':' + alias[type] + ':' + value;
             } else {
                 value = JSON.stringify(value);
             }

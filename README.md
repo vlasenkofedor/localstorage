@@ -48,6 +48,6 @@ storage
      fn(); //call function
     // value - new value
     // e = event object
-  })
+  });
 ```
 [Download all example](https://github.com/Poznakomlus/localstorage/archive/master.zip)
