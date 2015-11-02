@@ -4,7 +4,7 @@ Dual licensed under the [MIT](http://www.opensource.org/licenses/mit-license.php
 
 Work with localstorage, a subscription to localstorage events, storage of functions, array of object in localstorage, the subscription interface that allows to transfer parameters to followers (open tabs in browser), transfer and execute function
 
-Pабота с localstorage, подписка на события localstorage, хранение функций, массивов и объектов в localstorage, интерфейс подписки, что позволяет передать параметры подписчикам (открытым вкладкам браузера), передать и выполнить в них переданные функции
+Pабота с localstorage, подписка на события localstorage, хранение функций, массивов и объектов в localstorage, интерфейс подписки, позволяет передать параметры подписчикам (открытым вкладкам браузера), передать и выполнить в них переданные функции
 
 **Использование** | **Use**
 ```html
