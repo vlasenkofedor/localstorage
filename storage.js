@@ -9,7 +9,7 @@
  * @version 0.0.1
  */
 ;(function (win) {
-    
+
     var _storage = function (name, value) {
         var self;
         if (typeof(Storage) == "undefined") {
@@ -102,14 +102,26 @@
          */
         get: function (name) {
             var value = localStorage.getItem(name);
-            if (value && /^~(f|o)~/.test(value)) {
-                if (value.slice(1, 2) == 'f') {
-                    value = Function('return ' + value.slice(3))();
-                } else {
-                    value = JSON.parse(value.slice(3));
+            var replace = {
+                '0': function () {
+                    return null
+                },
+                'n': function (v) {
+                    return Number(v)
+                },
+                'b': function (v) {
+                    return Boolean(v)
+                },
+                'd': function (v) {
+                    return new Date(v)
+                },
+                'f': function (v) {
+                    return Function('return ' + v)()
                 }
-            }
-            return value;
+            };
+            return value && /^:(0|d|n|b|f):/.test(value)
+                ? replace[value.slice(1, 2)](value.slice(3))
+                : JSON.parse(value);
         },
 
         /**
@@ -120,9 +132,27 @@
          */
 
         set: function (name, value) {
-            var type = typeof value;
-            if (type == "function") value = "~f~" + value.toString();
-            else if (type == "Object") value = "~o~" + JSON.Stringify(value);
+            var alias = {
+                'Null': '0',
+                'Date': 'd',
+                'Number': 'n',
+                'Boolean': 'b',
+                'Function': 'f'
+            };
+            var type = Object.prototype.toString.call(value).split(/\s|]/)[1];
+            if (alias.hasOwnProperty(type)) {
+                switch (alias[type]) {
+                    case 'd':
+                    case 'f':
+                        value = ':' + alias[type] + ':' + value.toString();
+                        break;
+                    default:
+                        value = ':' + alias[type] + ':' + JSON.stringify(value);
+                        break;
+                }
+            } else {
+                value = JSON.stringify(value);
+            }
             localStorage.setItem(name, value);
             return this;
         },

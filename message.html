@@ -8,12 +8,11 @@
 <div id="container"></div>
 <script src="storage.min.js"></script>
 <script>
-    addEventListener('load', function(){
-        _storage().subscribe('message', function(msg){
-            document.getElementById('container').innerHTML += '<pre>' + msg + '</pre>';
-        });
-        _storage().subscribe('call', function(fn, e){
-            fn();
+    addEventListener('load', function () {
+        _storage().subscribe('message', function (msg, e) {
+            if(typeof msg === 'function') msg();
+            document.getElementById('container').innerHTML += '<pre>' + msg + '<br>Type: '
+                    + Object.prototype.toString.call(msg) + '</pre>';
             console.dir(e);
         });
     });

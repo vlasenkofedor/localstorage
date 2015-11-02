@@ -1,11 +1,28 @@
 (function (win) {
     _storage().clear();
-    document.getElementById('call').addEventListener('click', function () {
-        _storage('call', function(){
-            alert('Call Function');
-        });
-    });
     document.getElementById('send_msg').addEventListener('click', function () {
         _storage('message', document.getElementById('message').value);
     });
+
+    document.getElementById('send_null').addEventListener('click', function () {
+        _storage('message', null);
+    });
+    document.getElementById('send_number').addEventListener('click', function () {
+        _storage('message', 123);
+    });
+    document.getElementById('send_bool').addEventListener('click', function () {
+        _storage('message', true);
+    });
+    document.getElementById('send_date').addEventListener('click', function () {
+        _storage('message', new Date);
+    });
+    document.getElementById('send_fn').addEventListener('click', function () {
+        _storage('message', function () {
+            alert('Send Function');
+        });
+    });
+
+
+
+
 }(window));
