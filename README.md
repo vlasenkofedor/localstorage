@@ -6,7 +6,7 @@ Work with localstorage, a subscription to localstorage events, storage of functi
 
 Pабота с localstorage, подписка на события localstorage, хранение функций, массивов и объектов в localstorage, интерфейс подписки, что позволяет передать параметры подписчикам (открытым вкладкам браузера)
 
-Получение значений | Get value
+**Получение значений** | **Get value**
 ```javascript
 console.log(_storage('name')); // Ivan
 console.dir(_storage('test')); // [1, 2, 3] type: [object Array]
@@ -18,7 +18,7 @@ _storage('fn')(); // call function
 storage.get('fn')(); // call function
 ```
 
-Задание значений | Set value
+**Задание значений** | **Set value**
 ```javascript
 _storage('name', 'Ivan');
 _storage('test', [1, 2, 3]);
