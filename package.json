@@ -1,0 +1,10 @@
+{
+  "name": "storage",
+  "version": "0.0.1",
+  "description": "Storage JavaScript",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": ""
+  }
+}
