@@ -55,7 +55,7 @@ storage
     // e - event object
 }).subscribe('fn', function (fn, e) {
      fn(); //call function
-    // value - new value
+    // fn - new value
     // e - event object
   });
 ```
