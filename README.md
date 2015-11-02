@@ -32,4 +32,22 @@ storage
     .set('test', [1, 2, 3])
     .set('mydate', new Date);
 ```
+
+**Подписатся на изменение значения** | **Subscribe on change value**
+```javascript
+ _storage().subscribe('message', function (value, e) {
+     // value - new value
+     // e = event object
+ });
+
+ var storage = _storage();
+ storage.subscribe('message', function (value, e) {
+    // value - new value
+    // e = event object
+}).subscribe('fn', function (fn, e) {
+     fn(); //call function
+    // value - new value
+    // e = event object
+  })
+```
 [Download all example](https://github.com/Poznakomlus/localstorage/archive/master.zip)
