@@ -16,6 +16,9 @@
     document.getElementById('send_array').addEventListener('click', function () {
         _storage('message', [1, 2, 3, 4, 5]);
     });
+    document.getElementById('send_obj').addEventListener('click', function () {
+        _storage('message', {van: 1, two: 2});
+    });
     document.getElementById('send_date').addEventListener('click', function () {
         _storage('message', new Date);
     });

@@ -12,6 +12,7 @@ console.log(_storage('name')); // Ivan
 console.dir(_storage('test')); // [1, 2, 3] type: [object Array]
 console.dir(_storage('mydate')); // type: [object Date];
 console.dir(_storage('fn')); // type: [object Function]
+console.dir(_storage('obj')); // type: [object Object]
 var storage = _storage();
 alert(storage.get('name'));
 _storage('fn')(); // call function
@@ -22,6 +23,7 @@ storage.get('fn')(); // call function
 ```javascript
 _storage('name', 'Ivan');
 _storage('test', [1, 2, 3]);
+_storage('obj', {van: 1, two: 2});
 _storage('mydate', new Date);
 _storage('fn', function(){
     alert('Hi');
@@ -30,7 +32,8 @@ var storage = _storage();
 storage.set('name', 'Ivan');
 storage
     .set('test', [1, 2, 3])
-    .set('mydate', new Date);
+    .set('mydate', new Date)
+    .set('obj', {van: 1, two: 2});
 ```
 
 **Подписатся на изменение значения** | **Subscribe on change value**
