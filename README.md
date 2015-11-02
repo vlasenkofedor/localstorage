@@ -4,15 +4,32 @@ Dual licensed under the [MIT](http://www.opensource.org/licenses/mit-license.php
 
 Work with localstorage, a subscription to localstorage events, storage of functions, array of object in localstorage, the subscription interface that allows to transfer parameters to followers (open tabs in browser)
 
-Pабота с localstorage, подписка на события localstorage, хранение функций, массивов иобъектов в localstorage, интерфейс подписки, что позволяет передать параметры подписчикам (открытым вкладкам браузера)
+Pабота с localstorage, подписка на события localstorage, хранение функций, массивов и объектов в localstorage, интерфейс подписки, что позволяет передать параметры подписчикам (открытым вкладкам браузера)
+
+Получение значений | Get value
+```javascript
+console.log(_storage('name')); // Ivan
+console.dir(_storage('test')); // [1, 2, 3] type: [object Array]
+console.dir(_storage('mydate')); // type: [object Date];
+console.dir(_storage('fn')); // type: [object Function]
+var storage = _storage();
+alert(storage.get('name'));
+_storage('fn')(); // call function
+storage.get('fn')(); // call function
+```
 
 Задание значений | Set value
 ```javascript
 _storage('name', 'Ivan');
 _storage('test', [1, 2, 3]);
-_storage('test', new Date);
-_storage('test', function(){
+_storage('mydate', new Date);
+_storage('fn', function(){
     alert('Hi');
 };
+var storage = _storage();
+storage.set('name', 'Ivan');
+storage
+    .set('test', [1, 2, 3])
+    .set('mydate', new Date);
 ```
 [Download all example](https://github.com/Poznakomlus/localstorage/archive/master.zip)
