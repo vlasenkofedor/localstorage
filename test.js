@@ -28,6 +28,7 @@
         });
     });
     var storage = _storage();
+
     storage
         .set('test', [1, 2, 3])
         .set('mydate', new Date);

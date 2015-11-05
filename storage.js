@@ -29,7 +29,6 @@
         } else if (arguments.length == 2) {
             self.set(name, value);
         }
-
         return self;
     };
 

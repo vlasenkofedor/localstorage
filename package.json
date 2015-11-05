@@ -2,7 +2,7 @@
   "name": "localstorage",
   "version": "0.0.1",
   "description": "Storage JavaScript",
-  "license": "MIT",
+  "license": "MIT, GPL2",
   "repository": {
     "type": "git",
     "url": "https://github.com/Poznakomlus/localstorage.git"
