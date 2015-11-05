@@ -148,7 +148,6 @@
                         break;
                     default:
                         value = JSON.stringify(value);
-                        break;
                 }
                 value = ':' + alias[type] + ':' + value;
             } else {
