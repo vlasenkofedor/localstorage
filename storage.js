@@ -23,10 +23,10 @@
             _storage.prototype.instance = self;
             self._init();
         }
-
         if (arguments.length == 1) {
             return self.get(name);
-        } else if (arguments.length == 2) {
+        }
+        if (arguments.length == 2) {
             self.set(name, value);
         }
         return self;
