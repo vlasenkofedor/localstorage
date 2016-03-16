@@ -105,7 +105,7 @@
                     return Number(v)
                 },
                 'b': function (v) {
-                    return Boolean(v)
+                    return 'true' === (v)
                 },
                 'd': function (v) {
                     return new Date(v)
