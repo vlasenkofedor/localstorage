@@ -83,6 +83,7 @@
          * @private
          */
         _storageEvent: function (e) {
+            e = e || window.event;
             if (this._list.hasOwnProperty(e.key)) {
                 var that = this;
                 this._list[e.key].forEach(function (callback) {
@@ -108,7 +109,7 @@
                     return 'true' === (v)
                 },
                 'd': function (v) {
-                    return new Date(v)
+                     return new Date(v)
                 },
                 'f': function (v) {
                     return Function('return ' + v)()
