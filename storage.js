@@ -1,5 +1,5 @@
 /**
- * Storage
+ * LocalStorage
  *
  * Copyright (c) 2015 Vlasenko Fedor (VlasenkoFedor@mail.ru)
  * Dual licensed under the MIT and GPL licenses:

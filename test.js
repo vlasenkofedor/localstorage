@@ -1,3 +1,13 @@
+/**
+ * LocalStorage, tst.js
+ *
+ * Copyright (c) 2015 Vlasenko Fedor (VlasenkoFedor@mail.ru)
+ * Dual licensed under the MIT and GPL licenses:
+ * http://www.opensource.org/licenses/mit-license.php
+ * http://www.gnu.org/licenses/gpl.html
+ *
+ * @version 0.0.2
+ */
 (function (win) {
     _storage().clear();
     document.getElementById('send_msg').addEventListener('click', function () {
