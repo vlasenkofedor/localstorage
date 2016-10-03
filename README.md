@@ -14,7 +14,7 @@ cd localstorage
 
 npm install
 
-npm run
+node run.js
 
 ```html
 <script src="storage.js"></script>

@@ -4,13 +4,26 @@
   "description": "Storage JavaScript",
   "main": "run.js",
   "scripts": {
-    "run": "node run.js"
+    "runt": "node run.js"
   },
-  "license": "MIT, GPL2",
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/Poznakomlus/localstorage.git"
   },
+  "authors": [
+    {
+      "name": "Fedor",
+      "email": "vlasenkofedor@mail.ru",
+      "homepage": "https://fregate.org.ua"
+    }
+  ],
+  "keywords": [
+    "javascript",
+    "local storage",
+    "storage",
+    "js"
+  ],
   "dependencies": {
     "opn": "4.0.2"
   }
