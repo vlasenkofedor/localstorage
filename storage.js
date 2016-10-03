@@ -6,7 +6,7 @@
  * http://www.opensource.org/licenses/mit-license.php
  * http://www.gnu.org/licenses/gpl.html
  *
- * @version 0.0.1
+ * @version 0.0.2
  */
 ;(function (win) {
 
@@ -15,7 +15,6 @@
         if (typeof(Storage) == "undefined") {
             throw Error('_storage: Web Storage no support');
         }
-
         if (_storage.prototype.instance) {
             self = _storage.prototype.instance;
         } else {
@@ -115,7 +114,7 @@
                     return Function('return ' + v)()
                 }
             };
-            return value && /^:(0|d|n|b|f):/.test(value)
+            return value && /^:[bdfn0]:/.test(value)
                 ? replace[value.slice(1, 2)](value.slice(3))
                 : JSON.parse(value);
         },
