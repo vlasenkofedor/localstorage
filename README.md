@@ -9,8 +9,11 @@ Pабота с localstorage, подписка на события localstorage, 
 **Использование** | **Use**
 
 git clone https://github.com/Poznakomlus/localstorage.git
+
 cd localstorage
+
 npm install
+
 npm run
 
 ```html
