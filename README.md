@@ -7,6 +7,7 @@ Work with localstorage, a subscription to localstorage events, storage of functi
 Pабота с localstorage, подписка на события localstorage, хранение функций, массивов и объектов в localstorage, интерфейс подписки позволяет передать параметры подписчикам (открытым вкладкам браузера), передать и выполнить в них переданные функции
 
 **Использование** | **Use**
+
 git clone https://github.com/Poznakomlus/localstorage.git
 cd localstorage
 npm install
