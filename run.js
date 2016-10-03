@@ -24,6 +24,7 @@ http.createServer(function (req, res) {
         res.end();
     }
 }).listen(7777, "127.0.0.1", function () {
+    console.log('server http://127.0.0.1:7777/ started');
     opn('http://127.0.0.1:7777/recipient');
     opn('http://127.0.0.1:7777/sender');
 });

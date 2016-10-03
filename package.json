@@ -1,11 +1,11 @@
 {
+  "name": "localstorage",
+  "version": "0.0.2",
+  "description": "Storage JavaScript",
   "main": "run.js",
   "scripts": {
     "run": "node run.js"
   },
-  "name": "localstorage",
-  "version": "0.0.1",
-  "description": "Storage JavaScript",
   "license": "MIT, GPL2",
   "repository": {
     "type": "git",
