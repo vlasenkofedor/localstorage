@@ -51,7 +51,7 @@ storage
     .set('obj', {van: 1, two: 2});
 ```
 
-**Подписатся на изменение значения** | **Subscribe on change value**
+**Подписаться на изменение значения** | **Subscribe on change value**
 ```javascript
  _storage().subscribe('message', function (value, e) {
      // value - new value
@@ -68,7 +68,5 @@ storage
     // e - event object
   });
 ```
-`Download and start files on the server` | `Скачайте и запустите файлы на сервере`
-
 
 [Download all example](https://github.com/Poznakomlus/localstorage/archive/main.zip)
