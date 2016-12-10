@@ -1,5 +1,5 @@
 /**
- * LocalStorage, tst.js
+ * LocalStorage, test.js
  *
  * Copyright (c) 2015 Vlasenko Fedor (VlasenkoFedor@mail.ru)
  * Dual licensed under the MIT and GPL licenses:
@@ -8,31 +8,35 @@
  *
  * @version 0.0.2
  */
-(function (win) {
+;(function () {
     _storage().clear();
-    document.getElementById('send_msg').addEventListener('click', function () {
-        _storage('message', document.getElementById('message').value);
+    function el(id) {
+        return document.getElementById(id);
+    }
+
+    el('send_msg').addEventListener('click', function () {
+        _storage('message', el('message').value);
     });
 
-    document.getElementById('send_null').addEventListener('click', function () {
+    el('send_null').addEventListener('click', function () {
         _storage('message', null);
     });
-    document.getElementById('send_number').addEventListener('click', function () {
+    el('send_number').addEventListener('click', function () {
         _storage('message', 123);
     });
-    document.getElementById('send_bool').addEventListener('click', function () {
+    el('send_bool').addEventListener('click', function () {
         _storage('message', true);
     });
-    document.getElementById('send_array').addEventListener('click', function () {
+    el('send_array').addEventListener('click', function () {
         _storage('message', [1, 2, 3, 4, 5]);
     });
-    document.getElementById('send_obj').addEventListener('click', function () {
+    el('send_obj').addEventListener('click', function () {
         _storage('message', {van: 1, two: 2});
     });
-    document.getElementById('send_date').addEventListener('click', function () {
+    el('send_date').addEventListener('click', function () {
         _storage('message', new Date);
     });
-    document.getElementById('send_fn').addEventListener('click', function () {
+    el('send_fn').addEventListener('click', function () {
         _storage('message', function () {
             alert('Send Function');
         });
@@ -43,4 +47,4 @@
         .set('test', [1, 2, 3])
         .set('mydate', new Date);
 
-}(window));
+}());
