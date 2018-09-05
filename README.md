@@ -53,30 +53,32 @@ storage
 
 **Удаление значений** | **Remove value**
 ```javascript
-_storage.remove('name');
+var storage = _storage();
+storage.remove('name');
 ```
 
 **Очистка хранилища** | **Clear storage**
 ```javascript
-_storage.clear();
+var storage = _storage();
+storage.clear();
 ```
 
 **Подписаться на изменение значения** | **Subscribe on change value**
 ```javascript
- _storage().subscribe('message', function (value, e) {
-     // value - new value
-     // e - event object
- });
+_storage().subscribe('message', function (value, e) {
+    // value - new value
+    // e - event object
+});
 
- var storage = _storage();
- storage.subscribe('message', function (value, e) {
+var storage = _storage();
+storage.subscribe('message', function (value, e) {
     // value - new value
     // e - event object
 }).subscribe('fn', function (fn, e) {
-     fn(); //call function
-    // fn - new value
-    // e - event object
-  });
+    fn(); //call function
+   // fn - new value
+   // e - event object
+});
 ```
 
 [Download all example](https://github.com/Poznakomlus/localstorage/archive/main.zip)
