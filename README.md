@@ -8,7 +8,7 @@ Pабота с localstorage, подписка на события localstorage, 
 
 **Использование** | **Use**
 
-git clone https://github.com/Poznakomlus/localstorage.git
+git clone [https://github.com/vlasenkofedor/localstorage.git](https://github.com/vlasenkofedor/localstorage.git)
 
 cd localstorage
 
